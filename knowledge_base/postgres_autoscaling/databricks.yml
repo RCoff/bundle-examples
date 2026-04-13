@@ -32,7 +32,6 @@ resources:
       autoscaling_limit_max_cu: 2
 
   # (Optional) Non-default branch for development/testing.
-  #   Note: Branch is al
   # Note: READ_WRITE endpoints are currently created by default
   postgres_branches:
     dev:

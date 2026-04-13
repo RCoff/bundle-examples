@@ -25,7 +25,7 @@ Modify `databricks.yml`:
 
 Run `databricks bundle deploy` to deploy the bundle.
 
-Please note that after this bundle gets deployed, the project and its computes start running, which incurs cost. Computes with scale-to-zero enabled will suspend after the configured `suspend_timeout_duration`.
+Please note that after this bundle gets deployed, the project and its compute endpoints start running, which incurs cost. Endpoints with scale-to-zero enabled will suspend after the configured `suspend_timeout_duration`.
 
 Run the following queries against the **production** branch to populate your database with sample data:
 
@@ -42,7 +42,7 @@ databricks psql --project my-autoscaling-project -- -d databricks_postgres -c "S
 
 Run the following queries against the **development** branch to verify the branched data:
 
-**Important:** Prior to running the following command, the `development` branch MUST be 'reset' via the web UI. This will re-sync the child branch with its parent. More information regarding resetting a branch can be found [here](https://docs.databricks.com/aws/en/oltp/projects/manage-branches?#reset-branch-from-parent).
+**Important:** Prior to running the following command, the `development` branch MUST be 'reset' via the web UI. This will re-sync the child branch with its parent. More information regarding resetting a branch can be found [here](https://docs.databricks.com/aws/en/oltp/projects/manage-branches#reset-branch-from-parent).
 
 ```bash
 # Query the development branch:
